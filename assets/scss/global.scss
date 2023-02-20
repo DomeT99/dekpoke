@@ -1,6 +1,22 @@
+@import "./font.scss";
+
 :root {
 	--primary-color: #fb1b1b;
 	--secondary-color: #000000;
 	--tertiary-color: #dfdfdf;
 	--quaternary-color: #ffffff;
+
+}
+
+h1 {
+	@include font-generate(600, 2.2rem);
+}
+h2 {
+	@include font-generate(600, 1.7rem);
+}
+h3 {
+	@include font-generate(500, 1.5rem);
+}
+p {
+	@include font-generate(400, 1rem);
 }
