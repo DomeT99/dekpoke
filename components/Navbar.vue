@@ -6,8 +6,8 @@ const menu = [
   { title: "Machines", path: "/machines" },
 ];
 
-function openMobileMenu(){
-	document.querySelector("#mobile-menu")!.classList.toggle("hidden")
+function openMobileMenu() {
+  document.querySelector("#mobile-menu")!.classList.toggle("hidden");
 }
 </script>
 
@@ -20,7 +20,7 @@ function openMobileMenu(){
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
           <button
-		  @click="openMobileMenu"
+            @click="openMobileMenu"
             type="button"
             class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-[var(--tertiary-color)] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--secondary-color)]"
             aria-controls="mobile-menu"
