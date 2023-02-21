@@ -1,5 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-	<Navbar/>
+  <Navbar />
+  <section class="min-h-screen">
+    <slot></slot>
+  </section>
+  <Footer />
 </template>
