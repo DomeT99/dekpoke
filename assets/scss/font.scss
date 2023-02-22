@@ -1,7 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&display=swap");
 
+@font-face {
+	font-family:"Pokemon-Solid", sans-serif;
+	src: local('Pokemon-Solid') url("../font/PokemonHollow.ttf");
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+
 @mixin font-generate($weight, $size) {
 	font-family: "Cabin", sans-serif;
 	font-weight: $weight;
 	font-size: $size;
+}
+
+.title-font{
+	font-family: "Pokemon-Solid", sans-serif;
 }
