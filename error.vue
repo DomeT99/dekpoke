@@ -16,7 +16,7 @@ defineProps(["error"]);
       <h3>{{ error.message }}</h3>
     </div>
     <div class="flex justify-center">
-      <Image :path="pokemon" />
+      <Image :alt="'Pikachu'" :path="pokemon" />
     </div>
     <div class="flex justify-center sm:mt-[60px] mt-[40px]">
       <Button

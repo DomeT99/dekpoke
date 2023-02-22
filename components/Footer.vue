@@ -21,6 +21,7 @@ function openNuxt() {
   >
     <div class="mt-6 flex justify-center">
       <Image
+        :alt="'Built with Nuxt'"
         :class="'cursor-pointer'"
         @click="openNuxt"
         :height="170"
@@ -28,7 +29,7 @@ function openNuxt() {
         :path="nuxtLogo"
       />
     </div>
-    
+
     <div class="mt-6">
       <h3 class="cursor-pointer text-base" @click="openLinkTree">
         © Domenico Tenace {{ dateNow }}
