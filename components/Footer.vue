@@ -1,10 +1,38 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+let nuxtLogo = computed(() => {
+  return new URL("../assets/images/built-with-nuxt.svg", import.meta.url).href;
+});
+
+const dateNow = computed(() => {
+  return new Date().getFullYear();
+});
+
+function openLinkTree() {
+  window.open("https://linktr.ee/domenicotenace");
+}
+
+function openNuxt() {
+  window.open("https://nuxt.com/");
+}
+</script>
 <template>
   <footer
     class="min-h-[130px] border-t-4 border-t-[var(--tertiary-color)] bg-[var(--tertiary-color)] text-center"
   >
-    <h3>Ciao</h3>
-    <Image :path="'../assets/images/built-with-nuxt.svg'" />
-    <!-- <img height="150" width="150" src="../assets/images/built-with-nuxt.svg" /> -->
+    <div class="mt-6 flex justify-center">
+      <Image
+        :class="'cursor-pointer'"
+        @click="openNuxt"
+        :height="170"
+        :width="170"
+        :path="nuxtLogo"
+      />
+    </div>
+    
+    <div class="mt-6">
+      <h3 class="cursor-pointer text-base" @click="openLinkTree">
+        © Domenico Tenace {{ dateNow }}
+      </h3>
+    </div>
   </footer>
 </template>
