@@ -1,6 +1,6 @@
 <script setup lang="ts">
 let nuxtLogo = computed(() => {
-  return new URL("../assets/images/built-with-nuxt.svg", import.meta.url).href;
+  return new URL("../assets/images/built-with-nuxt.svg", import.meta.url).href; 
 });
 
 const dateNow = computed(() => {
