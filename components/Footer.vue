@@ -1,6 +1,6 @@
 <script setup lang="ts">
 let nuxtLogo = computed(() => {
-  return new URL("../assets/images/built-with-nuxt.svg", import.meta.url).href; 
+  return new URL("../assets/images/built-with-nuxt.svg", import.meta.url).href;   
 });
 
 const dateNow = computed(() => {
@@ -17,7 +17,7 @@ function openNuxt() {
 </script>
 <template>
   <footer
-    class="min-h-[130px] border-t-4 border-t-[var(--tertiary-color)] bg-[var(--tertiary-color)] text-center"
+    class="min-h-[130px] border-t-2 border-t-[var(--secondary-color)] bg-[var(--tertiary-color)] text-center"
   >
     <div class="mt-6 flex justify-center">
       <Image
@@ -32,7 +32,7 @@ function openNuxt() {
 
     <div class="mt-6">
       <h3 class="cursor-pointer text-base" @click="openLinkTree">
-        © Domenico Tenace {{ dateNow }}
+         Domenico "Dvalin" Tenace {{ dateNow }}
       </h3>
     </div>
   </footer>

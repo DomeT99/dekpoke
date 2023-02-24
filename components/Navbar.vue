@@ -7,10 +7,10 @@ const menu = [
 ];
 
 const logo = computed(() => {
-  return new URL("@/assets/images/ash.png", import.meta.url).href;
+  return new URL("@/assets/images/ash.png", import.meta.url).href;  
 });
 const appName = computed(()=>{
-  return new URL("@/assets/images/nome-app.png", import.meta.url).href;   
+  return new URL("@/assets/images/nome-app.png", import.meta.url).href;    
 })
 
 function openMobileMenu() {
@@ -20,7 +20,7 @@ function openMobileMenu() {
 
 <template>
   <nav
-    class="bg-[var(--tertiary-color)] text-[var(--quaternary-color)] border-b-2 border-b-[var(--secondary-color)]"
+    class="bg-[var(--quaternary-color)] text-[var(--quaternary-color)] border-b-2 border-b-[var(--secondary-color)] p-2"
   >
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
@@ -78,7 +78,7 @@ function openMobileMenu() {
             <div class="flex space-x-4">
               <span
                 v-for="voice in menu"
-                class="cursor-pointer font-semibold border-2 p-1 border-[var(--secondary-color)] rounded-lg bg-[var(--quaternary-color)] text-[var(--secondary-color)] w-24 text-center border-b-[5px]"
+                class="cursor-pointer font-semibold border-2 p-2 border-[var(--secondary-color)] rounded-lg bg-[var(--tertiary-color)] text-[var(--secondary-color)] w-32 text-center border-b-[5px]"
                 ><NuxtLink :to="voice.path">{{ voice.title }}</NuxtLink></span
               >
             </div>
@@ -91,7 +91,7 @@ function openMobileMenu() {
       <div class="space-y-1 px-2 pt-2 pb-3 mb-4">
         <span
           v-for="voice in menu"
-          class="cursor-pointer w-full mt-4 block font-semibold border-2 p-1 border-[var(--secondary-color)] rounded-lg bg-[var(--quaternary-color)] text-[var(--secondary-color)] w-24 text-center border-b-[5px]"
+          class="cursor-pointer w-full mt-4 block font-semibold border-2 p-1 border-[var(--secondary-color)] rounded-lg bg-[var(--tertiary-color)] text-[var(--secondary-color)] w-24 text-center border-b-[5px]"
           ><NuxtLink :to="voice.path">{{ voice.title }}</NuxtLink></span
         >
       </div>

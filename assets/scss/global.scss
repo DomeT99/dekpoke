@@ -1,22 +1,48 @@
 @import "./font.scss";
 
 :root {
-	--primary-color: #fb1b1b;
-	--secondary-color: #000000;
-	--tertiary-color: #dfdfdf;
-	--quaternary-color: #ffffff;
-
+  --primary-color: #fb1b1b;
+  --secondary-color: #000000;
+  --tertiary-color: #dfdfdf;
+  --quaternary-color: #ffffff;
+  --fifth-color: #ffcc00;
+  --sixth-color: #d5a100;
 }
 
+/*Body*/
+body {
+  background-color: var(--fifth-color);
+  font-family: "Pokemon-Classic";
+}
+
+/*Text*/
 h1 {
-	@include font-generate(600, 2.2rem);
+  @include font-generate(600, 1.5rem);
 }
 h2 {
-	@include font-generate(600, 1.7rem);
+  @include font-generate(600, 1.2rem);
 }
 h3 {
-	@include font-generate(500, 1.5rem);
+  @include font-generate(500, 1rem);
 }
 p {
-	@include font-generate(400, 1rem);
+  @include font-generate(400, 0.80rem);
+}
+
+/*ScrollBar*/
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: var(--tertiary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 10px;
 }

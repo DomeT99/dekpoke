@@ -21,17 +21,17 @@ let nuxtLogo = computed(() => {
       </div>
     </div>
 
-    <div class="pt-6 space-y-4 text-center p-4">
+    <div class="pt-6 space-y-4 text-center p-4 bg-[var(--quaternary-color)]">
       <blockquote>
-        <h2 class="text-lg">Pokemon</h2>
+        <h2>Pokemon</h2>
       </blockquote>
     </div>
-    <div class="pt-6 space-y-4 text-center p-4">
+    <div class="pt-6 space-y-4 text-center p-4 bg-[var(--quaternary-color)]">
       <Button
         :function="() => null"
         class="cursor-pointer font-semibold border-2 p-1 border-[var(--secondary-color)] rounded-lg bg-[var(--primary-color)] text-[var(--quaternary-color)] w-24 text-center border-b-[5px]"
       >
-        Details
+        <p>Details</p>
       </Button>
     </div>
   </figure>

@@ -1,19 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&display=swap");
-
 @font-face {
-	font-family:"Pokemon-Solid", sans-serif;
-	src: local('Pokemon-Solid') url("../font/PokemonHollow.ttf");
-	font-weight: normal;
-	font-style: normal;
-  }
-  
-
-@mixin font-generate($weight, $size) {
-	font-family: "Cabin", sans-serif;
-	font-weight: $weight;
-	font-size: $size;
+  font-family: "Pokemon-Classic";
+  src: url("../font/PokemonClassic.ttf") format("truetype");
 }
 
-.title-font{
-	font-family: "Pokemon-Solid", sans-serif;
+@mixin font-generate($weight, $size) {
+  font-family: "Pokemon-Classic";
+  font-weight: $weight;
+  font-size: $size;
 }
