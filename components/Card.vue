@@ -29,7 +29,7 @@ let nuxtLogo = computed(() => {
     <div class="pt-6 space-y-4 text-center p-4 bg-[var(--quaternary-color)]">
       <Button
         :function="() => null"
-        class="cursor-pointer font-semibold border-2 p-1 border-[var(--secondary-color)] rounded-lg bg-[var(--primary-color)] text-[var(--quaternary-color)] w-24 text-center border-b-[5px]"
+        class="cursor-pointer font-semibold border-2 p-1 pb-2 border-[var(--secondary-color)] rounded-lg bg-[var(--primary-color)] text-[var(--quaternary-color)] w-24 text-center border-b-[5px]"
       >
         <p>Details</p>
       </Button>
