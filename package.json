@@ -10,7 +10,8 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.4.1",
     "@vite-pwa/nuxt": "^0.0.5",
-    "nuxt": "^3.2.2"
+    "nuxt": "^3.2.2",
+    "nuxt-lodash": "^2.4.1"
   },
   "overrides": {
     "vue": "latest"
