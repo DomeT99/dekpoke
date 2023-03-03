@@ -4,18 +4,22 @@ interface Table {
   data: object[];
 }
 const props = defineProps<Table>();
+
+let tdWidth = computed(() => {
+  return 100 / props.tableHeader.length;
+});
 </script>
 
 <template>
-  <div class="flex justify-center mx-auto">
-    <div class="flex flex-col">
+  <div class="flex justify-center mx-auto mb-16">
+    <div class="flex flex-col overflow-x-scroll md:overflow-x-auto">
       <table
-        class="divide-y divide-y-2 divide-[var(--secondary-color)] border-4 rounded-3xl border-[var(--secondary-color)]"
+        class="divide-y divide-y-2 divide-[var(--secondary-color)] border-4 border-[var(--secondary-color)] sm:block"
       >
-        <thead class="bg-gray-50">
+        <thead class="bg-gray-50 block">
           <tr class="bg-[var(--primary-color)]">
             <th
-              class="px-6 py-2 sm:text-lg text-xs text-[var()]"
+              class="px-6 py-2 sm:text-lg text-xs text-[var(--secondary-color)]"
               v-for="head in props.tableHeader"
               :key="_uniqueId('')"
             >
@@ -23,14 +27,16 @@ const props = defineProps<Table>();
             </th>
           </tr>
         </thead>
-        <tbody class="bg-white divide-y divide-[var(--tertiary-color)]">
+        <tbody
+          class="bg-white divide-y divide-[var(--tertiary-color)] h-[400px] overflow-y-auto sm:overflow-x-hidden block"
+        >
           <tr
-            class="text-center"
+            class="text-center block"
             v-for="obj in props.data"
             :key="_uniqueId('')"
           >
             <td
-              class="px-6 py-4 text-sm text-[var(--secondary-color)]"
+              :class="`px-6 py-4 text-sm text-[var(--secondary-color)] inline-block w-[${tdWidth}%]`"
               v-for="data in obj"
               :key="_uniqueId('')"
             >
