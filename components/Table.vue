@@ -6,9 +6,7 @@ interface Table {
 
 const props = defineProps<Table>();
 
-const tdWidth = computed(() => {
-  return `${_divide(100, props.tableHeader.length)}%`;
-});
+const tdWidth = computed(() => `${_divide(100, props.tableHeader.length)}%`);
 </script>
 
 <template>
@@ -38,7 +36,8 @@ const tdWidth = computed(() => {
             :key="_uniqueId('')"
           >
             <td
-              :class="`px-6 py-4 text-sm text-[var(--secondary-color)] inline-block w-[${tdWidth}]`"
+              :style="`width:${tdWidth}`"
+              class="px-6 py-4 text-sm text-[var(--secondary-color)] inline-block"
               v-for="data in obj"
               :key="_uniqueId('')"
             >
