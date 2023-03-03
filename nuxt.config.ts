@@ -3,9 +3,12 @@ export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt",
     "@nuxtjs/tailwindcss",
-    "@vite-pwa/nuxt",
+    "@nuxtjs/pwa",
     "nuxt-lodash",
   ],
+  pwa: {
+    icon: false 
+  },
   lodash: {
     prefix: "_",
     prefixSkip: ["string"],
