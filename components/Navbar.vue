@@ -6,12 +6,7 @@ const menu = [
   { title: "Machines", path: "/machines" },
 ];
 
-const logo = computed(() => {
-  return new URL("@/assets/images/ash.png", import.meta.url).href;  
-});
-const appName = computed(()=>{
-  return new URL("@/assets/images/nome-app.png", import.meta.url).href;    
-})
+const appName = computed(() => "/images/nome-app.png");
 
 function openMobileMenu() {
   document.querySelector("#mobile-menu")!.classList.toggle("hidden");
@@ -70,9 +65,20 @@ function openMobileMenu() {
           class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
         >
           <div class="flex flex-shrink-0 items-center">
-            
-            <Image :height="120" :width="120" class="hidden h-[50px] w-auto lg:block mt-1 mr-2" :alt="'Dekpoke Logo'" :path="appName" />
-            <Image :height="120" :width="120" class="block h-[50px] w-auto lg:hidden" :alt="'Dekpoke Logo'" :path="appName" />
+            <Image
+              :height="120"
+              :width="120"
+              class="hidden h-[50px] w-auto lg:block mt-1 mr-2"
+              :alt="'Dekpoke Logo'"
+              :path="appName"
+            />
+            <Image
+              :height="120"
+              :width="120"
+              class="block h-[50px] w-auto lg:hidden"
+              :alt="'Dekpoke Logo'"
+              :path="appName"
+            />
           </div>
           <div class="hidden sm:ml-6 sm:mt-2 sm:block">
             <div class="flex space-x-4">

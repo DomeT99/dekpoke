@@ -1,7 +1,5 @@
 <script setup lang="ts">
-let nuxtLogo = computed(() => {
-  return new URL("../assets/images/ash.png", import.meta.url).href;
-});
+let nuxtLogo = computed(() => "/images/ash.png");
 </script>
 <template>
   <figure class="rounded-xl border-[3px] border-[var(--secondary-color)]">
