@@ -3,10 +3,11 @@ interface Table {
   tableHeader: string[];
   data: object[];
 }
+
 const props = defineProps<Table>();
 
-let tdWidth = computed(() => {
-  return 100 / props.tableHeader.length;
+const tdWidth = computed(() => {
+  return `${_divide(100, props.tableHeader.length)}%`;
 });
 </script>
 
@@ -14,6 +15,7 @@ let tdWidth = computed(() => {
   <div class="flex justify-center mx-auto mb-16">
     <div class="flex flex-col overflow-x-scroll md:overflow-x-auto">
       <table
+        :id="_uniqueId('')"
         class="divide-y divide-y-2 divide-[var(--secondary-color)] border-4 border-[var(--secondary-color)] sm:block"
       >
         <thead class="bg-gray-50 block">
@@ -36,7 +38,7 @@ let tdWidth = computed(() => {
             :key="_uniqueId('')"
           >
             <td
-              :class="`px-6 py-4 text-sm text-[var(--secondary-color)] inline-block w-[${tdWidth}%]`"
+              :class="`px-6 py-4 text-sm text-[var(--secondary-color)] inline-block w-[${tdWidth}]`"
               v-for="data in obj"
               :key="_uniqueId('')"
             >
