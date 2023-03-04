@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt",
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/pwa",
     "nuxt-lodash",
   ],
   pwa: {
