@@ -3,7 +3,6 @@ const menu = [
   { title: "Pokemon", path: "/" },
   { title: "Moves", path: "/moves" },
   { title: "Items", path: "/items" },
-  { title: "Machines", path: "/machines" },
 ];
 
 const appName = computed(() => "/images/nome-app.png");
