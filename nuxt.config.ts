@@ -1,12 +1,8 @@
 // @ts-nocheck
 export default defineNuxtConfig({
-  modules: [
-    "@pinia/nuxt",
-    "@nuxtjs/tailwindcss",
-    "nuxt-lodash",
-  ],
+  modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss", "nuxt-lodash"],
   pwa: {
-    icon: false 
+    icon: false,
   },
   lodash: {
     prefix: "_",
@@ -20,4 +16,5 @@ export default defineNuxtConfig({
     ],
   },
   css: ["assets/scss/global.scss"],
+  components: [{ path: "./components/Details"}, './components'],
 });
