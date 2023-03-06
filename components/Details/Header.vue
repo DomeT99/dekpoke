@@ -8,7 +8,7 @@
         <Image
           :alt="'parameter'"
           class="w-full"
-          :path="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'"
+          :path="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png'"
         />
       </figure>
 
