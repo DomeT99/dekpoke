@@ -3,7 +3,7 @@
   <header class="grid lg:grid-cols-7 md:grid-cols-3">
     <div class="lg:col-start-4 md:col-start-2">
       <figure
-        class="md:w-[13.5rem] w-[9.5rem] bg-[var(--tertiary-color)] rounded-full border-2 border-[var(--secondary-color)] flex justify-center mx-auto"
+        class="md:w-[13.5rem] w-[9.5rem] bg-[var(--sixth-color)] rounded-full border-2 border-[var(--secondary-color)] flex justify-center mx-auto"
       >
         <Image
           :alt="'parameter'"

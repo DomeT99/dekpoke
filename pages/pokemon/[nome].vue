@@ -10,9 +10,16 @@ useHead({
 <template>
   <section class="container pt-[6rem] mx-auto">
     <Header />
-    <article class="grid sm:grid-cols-2 gap-8 mt-[6rem]">
-      <Stats />
-      <Stats />
+    <article class="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mt-[6rem] mb-8">
+      <div class="lg:col-start-1 md:col-start-1">
+        <Stats />
+      </div>
+      <div class="lg:col-start-2 md:col-start-1">
+        <Stats />
+      </div>
+      <div class="lg:col-start-3 md:col-start-1">
+        <Stats />
+      </div>
     </article>
   </section>
 </template>
