@@ -11,7 +11,7 @@ const props = defineProps<Box>();
   <div
     :class="`border-4 rounded-xl border-[var(${
       props.borderColor ?? '--secondary-color'
-    })] bg-[var(${props.backgroundColor ?? '--sixth-color'})] min-h-[30vh] p-4`"
+    })] bg-[var(${props.backgroundColor ?? '--sixth-color'})] min-h-[35vh] p-4`"
   >
     <slot></slot>
   </div>
