@@ -4,6 +4,10 @@ interface Card{
   title?:string;
 }
 const props = defineProps<Card>()
+
+const titleComput = computed(()=>{
+  return props.title?.charAt(0).toLocaleUpperCase() + props.title!.slice(1);
+})
 </script>
 <template>
   <figure class="rounded-xl border-[3px] border-[var(--secondary-color)]">
@@ -25,7 +29,7 @@ const props = defineProps<Card>()
 
     <div class="pt-6 space-y-4 text-center p-4 bg-[var(--quaternary-color)]">
       <blockquote>
-        <h2>{{ props.title }}</h2>
+        <h2>{{ titleComput }}</h2>
       </blockquote>
     </div>
     <div class="pt-6 space-y-4 text-center p-4 bg-[var(--quaternary-color)]">

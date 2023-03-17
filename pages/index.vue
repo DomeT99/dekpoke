@@ -1,26 +1,31 @@
 <script setup lang="ts">
 import { Pokemon } from "~~/modules/Models/Pokemon";
+import { useComponentStore } from "../store/componentStore";
+import { usePokeStore } from "../store/pokeStore";
 
-const pokemonComputed: Ref<Pokemon[]> = ref([]);
-const isLoading = ref(true);
+const componentStore = useComponentStore();
+const pokeStore = usePokeStore();
 
 onNuxtReady(async () => {
-  const { data, pending } = await useLazyFetch<Pokemon[]>("/api/pokemon.json");
+  if (pokeStore.pokemonComputed.length <= 0) {
+    const { data, pending } = await useLazyFetch<Pokemon[]>(
+      "/api/pokemon.json"
+    );
 
-  data.value?.forEach((pokemon: Pokemon) =>
-    pokemonComputed.value.push(pokemon)
-  );
+    _forEach(data.value, (pokemon: Pokemon) =>
+      pokeStore.pokemonComputed.push(pokemon)
+    );
 
-  isLoading.value = pending.value;
+    componentStore.isLoading = pending.value;
+  }
 });
 
-const pokemonArray = computed(() => {
-  return pokemonComputed.value;
-});
+const pokemonArray = computed(() => pokeStore.pokemonComputed);
+
 </script>
 <template>
-  <Spinner v-show="isLoading" />
-  <section class="container mx-auto">
+  <Spinner v-if="componentStore.isLoading" />
+  <section class="container mx-auto" v-else>
     <header class="text-center mb-[3rem] mt-[3rem]">
       <h1>List of Pokemon</h1>
     </header>
