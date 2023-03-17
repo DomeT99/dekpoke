@@ -16,5 +16,5 @@ export default defineNuxtConfig({
     ],
   },
   css: ["assets/scss/global.scss"],
-  components: [{ path: "./components/Details"}, './components'],
+  components: [{ path: "./components/Details" }, "./components"]
 });

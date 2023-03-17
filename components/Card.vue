@@ -1,5 +1,9 @@
 <script setup lang="ts">
-let nuxtLogo = computed(() => "/images/ash.png");
+interface Card{
+  image?:string;
+  title?:string;
+}
+const props = defineProps<Card>()
 </script>
 <template>
   <figure class="rounded-xl border-[3px] border-[var(--secondary-color)]">
@@ -14,14 +18,14 @@ let nuxtLogo = computed(() => "/images/ash.png");
           class="w-24 h-24 rounded"
           :height="512"
           :width="384"
-          :path="nuxtLogo"
+          :path="props.image ?? '/images/ash.png'"
         />
       </div>
     </div>
 
     <div class="pt-6 space-y-4 text-center p-4 bg-[var(--quaternary-color)]">
       <blockquote>
-        <h2>Pokemon</h2>
+        <h2>{{ props.title }}</h2>
       </blockquote>
     </div>
     <div class="pt-6 space-y-4 text-center p-4 bg-[var(--quaternary-color)]">
