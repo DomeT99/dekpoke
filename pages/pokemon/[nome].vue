@@ -17,7 +17,9 @@ useHead({
       <div class="lg:col-start-2 md:col-start-1">
         <Stats />
       </div>
-      <div class="lg:col-start-3 md:col-start-1"></div>
+      <div class="lg:col-start-3 md:col-start-1">
+        <Moves/>
+      </div>
     </article>
   </section>
 </template>
