@@ -7,18 +7,24 @@ const componentStore = useComponentStore();
 const moveStore = useMoveStore();
 
 onNuxtReady(async () => {
-  if (moveStore.moveComputed.length <= 0) {
-    const { data, pending } = await useLazyFetch<Move[]>("/api/moves.json");
+  await fetchMoves();
+});
 
-    _forEach(data.value, (move: Move) => moveStore.moveComputed.push(move));
+const moveArray = computed(() => moveStore.moveComputed);
 
-    componentStore.isLoading = pending.value;
+const fetchMoves = async () => {
+  try {
+    if (moveStore.moveComputed.length <= 0) {
+      const { data, pending } = await useLazyFetch<Move[]>("/api/moves.json");
+
+      _forEach(data.value, (move: Move) => moveStore.moveComputed.push(move));
+
+      componentStore.isLoading = pending.value;
+    }
+  } catch (e) {
+    throw e;
   }
-});
-
-const moveArray = computed(() => {
-  return moveStore.moveComputed;
-});
+};
 </script>
 <template>
   <Spinner v-if="componentStore.isLoading" />
@@ -26,6 +32,7 @@ const moveArray = computed(() => {
     <header class="text-center mb-[3rem] mt-[3rem]">
       <h1>Moves</h1>
     </header>
+    
     <div>
       <Table
         :data="moveArray"

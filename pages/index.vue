@@ -6,22 +6,29 @@ import { usePokeStore } from "../store/pokeStore";
 const componentStore = useComponentStore();
 const pokeStore = usePokeStore();
 
-onNuxtReady(async () => {
-  if (pokeStore.pokemonComputed.length <= 0) {
-    const { data, pending } = await useLazyFetch<Pokemon[]>(
-      "/api/pokemon.json"
-    );
-
-    _forEach(data.value, (pokemon: Pokemon) =>
-      pokeStore.pokemonComputed.push(pokemon)
-    );
-
-    componentStore.isLoading = pending.value;
-  }
+onNuxtReady(async() => {
+  await fetchPokemons();
 });
 
 const pokemonArray = computed(() => pokeStore.pokemonComputed);
 
+const fetchPokemons = async () => {
+  try {
+    if (pokeStore.pokemonComputed.length <= 0) {
+      const { data, pending } = await useLazyFetch<Pokemon[]>(
+        "/api/pokemon.json"
+      );
+
+      _forEach(data.value, (pokemon: Pokemon) =>
+        pokeStore.pokemonComputed.push(pokemon)
+      );
+
+      componentStore.isLoading = pending.value;
+    }
+  } catch (e) {
+    throw e;
+  }
+};
 </script>
 <template>
   <Spinner v-if="componentStore.isLoading" />
