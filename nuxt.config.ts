@@ -1,9 +1,6 @@
 // @ts-nocheck
 export default defineNuxtConfig({
   modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss", "nuxt-lodash"],
-  pwa: {
-    icon: false,
-  },
   lodash: {
     prefix: "_",
     prefixSkip: ["string"],
@@ -16,5 +13,15 @@ export default defineNuxtConfig({
     ],
   },
   css: ["assets/scss/global.scss"],
-  components: [{ path: "./components/Details" }, "./components"]
+  components: [{ path: "./components/Details" }, "./components"],
+  app: {
+    head: {
+      charset: "utf-16",
+      viewport: "width=500, initial-scale=1",
+      title: "Dekpoke 🐹",
+      meta: [
+        { name: "description", content: "Amazing Pokedex for you! 🤙" },
+      ],
+    },
+  },
 });
