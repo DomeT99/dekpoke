@@ -29,7 +29,7 @@ const tdWidth = computed(() => `${_divide(100, props.tableHeader.length)}%`);
           </tr>
         </thead>
         <tbody
-          class="bg-white divide-y divide-[var(--tertiary-color)] h-[400px] overflow-y-auto sm:overflow-x-hidden block"
+          class="bg-white divide-y divide-[var(--tertiary-color)] h-[400px] overflow-y-auto overflow-x-hidden block"
         >
           <tr
             class="text-center block"

@@ -1,9 +1,6 @@
 export interface Pokemon {
   Id?: number;
   Name?: string;
-  Base_Experience?: number;
-  Height?: number;
-  Weight?: number;
   Stats?: Stat[];
   Sprites?: Sprites;
   Types?: Type[];
