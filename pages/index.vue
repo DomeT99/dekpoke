@@ -6,7 +6,7 @@ import { usePokeStore } from "../store/pokeStore";
 const componentStore = useComponentStore();
 const pokeStore = usePokeStore();
 
-onNuxtReady(async() => {
+onNuxtReady(async () => {
   await fetchPokemons();
 });
 
@@ -29,6 +29,7 @@ const fetchPokemons = async () => {
     throw e;
   }
 };
+
 </script>
 <template>
   <Spinner v-if="componentStore.isLoading" />
@@ -41,7 +42,11 @@ const fetchPokemons = async () => {
       class="grid lg:grid-cols-6 md:grid-cols-3 gap-[3rem] mb-[8rem] max-h-[50rem] overflow-auto p-8 bg-[var(--tertiary-color)] border-4 border-[var(--secondary-color)] rounded-lg"
     >
       <div v-for="pokemon in pokemonArray">
-        <Card :image="pokemon.Sprites?.Front_Default" :title="pokemon.Name" />
+        <Card
+          :func="() => useRouter().push(`/pokemon/${pokemon.Name}`)"
+          :image="pokemon.Sprites?.Front_Default"
+          :title="pokemon.Name"
+        />
       </div>
     </div>
   </section>
