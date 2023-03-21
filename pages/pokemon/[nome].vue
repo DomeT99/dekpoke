@@ -2,10 +2,7 @@
 import { Pokemon } from "~~/modules/Models/Pokemon";
 import { usePokeStore } from "~~/store/pokeStore";
 
-let parameter =
-  useRoute().params.nome.toString().charAt(0).toLocaleUpperCase() +
-  useRoute().params.nome.toString().slice(1);
-
+let parameter = useUpperCase(useRoute().params.nome.toString()!);
 useHead({
   title: `Dekpoke - ${parameter}`,
 });

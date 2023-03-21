@@ -1,9 +1,5 @@
 <script setup lang="ts">
-const dynamicTitle = computed(() => {
-  let routeName = useRoute().name?.toString();
-
-  return routeName!.charAt(0).toLocaleUpperCase() + routeName!.slice(1);
-});
+const dynamicTitle = computed(() => useUpperCase(useRoute().name?.toString()!));
 </script>
 
 <template>

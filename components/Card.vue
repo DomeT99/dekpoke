@@ -6,9 +6,7 @@ interface Card {
 }
 const props = defineProps<Card>();
 
-const titleComput = computed(() => {
-  return props.title?.charAt(0).toLocaleUpperCase() + props.title!.slice(1);
-});
+const titleComput = computed(() => useUpperCase(props.title!));
 </script>
 <template>
   <figure class="rounded-xl border-[3px] border-[var(--secondary-color)]">

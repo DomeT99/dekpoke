@@ -9,9 +9,8 @@ interface Header {
 
 const props = defineProps<Header>();
 
-const titleComput = computed(
-  () => props.title?.charAt(0).toLocaleUpperCase() + props.title!.slice(1)
-);
+const titleComput = computed(() => useUpperCase(props.title));
+
 </script>
 <template>
   <header class="grid lg:grid-cols-7 md:grid-cols-3">
@@ -24,7 +23,10 @@ const titleComput = computed(
       <div class="text-center mt-8 mx-auto">
         <h1>{{ titleComput }}</h1>
 
-        <div v-for="t in props.types" class="mt-8 inline-flex ml-2 bg-[var(--tertiary-color)] p-1 rounded-full">
+        <div
+          v-for="t in props.types"
+          class="mt-8 inline-flex ml-2 bg-[var(--tertiary-color)] p-1 rounded-full"
+        >
           <h3>{{ t.Name }}</h3>
         </div>
       </div>
