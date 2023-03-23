@@ -11,7 +11,7 @@ const call = new CallData<Pokemon>();
 const pokemonComputed = computed(() => store.pokemonArray);
 
 onNuxtReady(
-  async () => await call.useGet("/pokemon.json", store.pokemonArray)
+  async () => await call.useGet("/api/pokemon.json", store.pokemonArray)
 );
 </script>
 <template>

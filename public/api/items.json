@@ -1,0 +1,302 @@
+[
+  {
+    "Name": "master-ball",
+    "Cost": 0,
+    "Effect": "Catches a wild Pokémon every time.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png"
+  },
+  {
+    "Name": "ultra-ball",
+    "Cost": 800,
+    "Effect": "Tries to catch a wild Pokémon.  Success rate is 2×.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png"
+  },
+  {
+    "Name": "great-ball",
+    "Cost": 600,
+    "Effect": "Tries to catch a wild Pokémon.  Success rate is 1.5×.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"
+  },
+  {
+    "Name": "poke-ball",
+    "Cost": 200,
+    "Effect": "Tries to catch a wild Pokémon.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+  },
+  {
+    "Name": "safari-ball",
+    "Cost": 0,
+    "Effect": "Tries to catch a wild Pokémon in the Great Marsh or Safari Zone.  Success rate is 1.5×.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/safari-ball.png"
+  },
+  {
+    "Name": "net-ball",
+    "Cost": 1000,
+    "Effect": "Tries to catch a wild Pokémon.  Success rate is 3× for water and bug Pokémon.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/net-ball.png"
+  },
+  {
+    "Name": "dive-ball",
+    "Cost": 1000,
+    "Effect": "Tries to catch a wild Pokémon. Success rate is 3.5× when underwater, fishing, or surfing.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dive-ball.png"
+  },
+  {
+    "Name": "nest-ball",
+    "Cost": 1000,
+    "Effect": "Tries to catch a wild Pokémon.  Success rate is 3.9× for level 1 Pokémon, and drops steadily to 1× at level 30.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nest-ball.png"
+  },
+  {
+    "Name": "repeat-ball",
+    "Cost": 1000,
+    "Effect": "Tries to catch a wild Pokémon.  Success rate is 3× for previously-caught Pokémon.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/repeat-ball.png"
+  },
+  {
+    "Name": "timer-ball",
+    "Cost": 1000,
+    "Effect": "Tries to catch a wild Pokémon. Success rate increases by 0.1× (Gen V: 0.3×) every turn, to a max of 4×.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/timer-ball.png"
+  },
+  {
+    "Name": "luxury-ball",
+    "Cost": 3000,
+    "Effect": "Tries to catch a wild Pokémon.  Caught Pokémon start with 200 happiness.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/luxury-ball.png"
+  },
+  {
+    "Name": "premier-ball",
+    "Cost": 20,
+    "Effect": "Tries to catch a wild Pokémon.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/premier-ball.png"
+  },
+  {
+    "Name": "dusk-ball",
+    "Cost": 1000,
+    "Effect": "Tries to catch a wild Pokémon.  Success rate is 3.5× at night and in caves.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-ball.png"
+  },
+  {
+    "Name": "heal-ball",
+    "Cost": 300,
+    "Effect": "Tries to catch a wild Pokémon.  Caught Pokémon are immediately healed.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-ball.png"
+  },
+  {
+    "Name": "quick-ball",
+    "Cost": 1000,
+    "Effect": "Tries to catch a wild Pokémon. Success rate is 4× (Gen V: 5×), but only on the first turn.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-ball.png"
+  },
+  {
+    "Name": "cherish-ball",
+    "Cost": 0,
+    "Effect": "Tries to catch a wild Pokémon.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cherish-ball.png"
+  },
+  {
+    "Name": "potion",
+    "Cost": 200,
+    "Effect": "Restores 20 HP.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/potion.png"
+  },
+  {
+    "Name": "antidote",
+    "Cost": 200,
+    "Effect": "Cures poison.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/antidote.png"
+  },
+  {
+    "Name": "burn-heal",
+    "Cost": 200,
+    "Effect": "Cures a burn.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/burn-heal.png"
+  },
+  {
+    "Name": "ice-heal",
+    "Cost": 200,
+    "Effect": "Cures freezing.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-heal.png"
+  },
+  {
+    "Name": "awakening",
+    "Cost": 200,
+    "Effect": "Cures sleep.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/awakening.png"
+  },
+  {
+    "Name": "paralyze-heal",
+    "Cost": 200,
+    "Effect": "Cures paralysis.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/paralyze-heal.png"
+  },
+  {
+    "Name": "full-restore",
+    "Cost": 3000,
+    "Effect": "Restores HP to full and cures any status ailment and confusion.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-restore.png"
+  },
+  {
+    "Name": "max-potion",
+    "Cost": 2500,
+    "Effect": "Restores HP to full.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-potion.png"
+  },
+  {
+    "Name": "hyper-potion",
+    "Cost": 1500,
+    "Effect": "Restores 200 HP.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hyper-potion.png"
+  },
+  {
+    "Name": "super-potion",
+    "Cost": 700,
+    "Effect": "Restores 50 HP.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-potion.png"
+  },
+  {
+    "Name": "full-heal",
+    "Cost": 400,
+    "Effect": "Cures any status ailment and confusion.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-heal.png"
+  },
+  {
+    "Name": "revive",
+    "Cost": 2000,
+    "Effect": "Revives with half HP.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revive.png"
+  },
+  {
+    "Name": "max-revive",
+    "Cost": 4000,
+    "Effect": "Revives with full HP.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-revive.png"
+  },
+  {
+    "Name": "fresh-water",
+    "Cost": 200,
+    "Effect": "Restores 50 HP.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fresh-water.png"
+  },
+  {
+    "Name": "soda-pop",
+    "Cost": 300,
+    "Effect": "Restores 60 HP.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soda-pop.png"
+  },
+  {
+    "Name": "lemonade",
+    "Cost": 400,
+    "Effect": "Restores 80 HP.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lemonade.png"
+  },
+  {
+    "Name": "moomoo-milk",
+    "Cost": 600,
+    "Effect": "Restores 100 HP.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moomoo-milk.png"
+  },
+  {
+    "Name": "energy-powder",
+    "Cost": 500,
+    "Effect": "Restores 50 HP, but lowers happiness.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-powder.png"
+  },
+  {
+    "Name": "energy-root",
+    "Cost": 1200,
+    "Effect": "Restores 200 HP, but lowers happiness.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-root.png"
+  },
+  {
+    "Name": "heal-powder",
+    "Cost": 300,
+    "Effect": "Cures any status ailment, but lowers happiness.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-powder.png"
+  },
+  {
+    "Name": "revival-herb",
+    "Cost": 2800,
+    "Effect": "Revives with full HP, but lowers happiness.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revival-herb.png"
+  },
+  {
+    "Name": "ether",
+    "Cost": 1200,
+    "Effect": "Restores 10 PP for one move.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ether.png"
+  },
+  {
+    "Name": "max-ether",
+    "Cost": 2000,
+    "Effect": "Restores PP to full for one move.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-ether.png"
+  },
+  {
+    "Name": "elixir",
+    "Cost": 3000,
+    "Effect": "Restores 10 PP for each move.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/elixir.png"
+  },
+  {
+    "Name": "max-elixir",
+    "Cost": 4500,
+    "Effect": "Restores PP to full for each move.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-elixir.png"
+  },
+  {
+    "Name": "lava-cookie",
+    "Cost": 350,
+    "Effect": "Cures any status ailment and confusion.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lava-cookie.png"
+  },
+  {
+    "Name": "berry-juice",
+    "Cost": 200,
+    "Effect": "Restores 20 HP.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berry-juice.png"
+  },
+  {
+    "Name": "sacred-ash",
+    "Cost": 50000,
+    "Effect": "Revives all fainted Pokémon with full HP.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sacred-ash.png"
+  },
+  {
+    "Name": "hp-up",
+    "Cost": 10000,
+    "Effect": "Raises HP effort and happiness.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hp-up.png"
+  },
+  {
+    "Name": "protein",
+    "Cost": 10000,
+    "Effect": "Raises Attack effort and happiness.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protein.png"
+  },
+  {
+    "Name": "iron",
+    "Cost": 10000,
+    "Effect": "Raises Defense effort and happiness.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron.png"
+  },
+  {
+    "Name": "carbos",
+    "Cost": 10000,
+    "Effect": "Raises Speed effort and happiness.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/carbos.png"
+  },
+  {
+    "Name": "calcium",
+    "Cost": 10000,
+    "Effect": "Raises Special Attack effort and happiness.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/calcium.png"
+  },
+  {
+    "Name": "rare-candy",
+    "Cost": 10000,
+    "Effect": "Causes a level-up and raises happiness.",
+    "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rare-candy.png"
+  }
+]

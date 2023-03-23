@@ -10,7 +10,7 @@ const call = new CallData<Move>();
 
 const moveComputed = computed(() => store.moveArray);
 
-onNuxtReady(async () => await call.useGet("/moves.json", store.moveArray));
+onNuxtReady(async () => await call.useGet("/api/moves.json", store.moveArray));
 </script>
 <template>
   <Spinner v-if="componentStore.isLoading" />
