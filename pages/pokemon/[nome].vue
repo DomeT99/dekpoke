@@ -23,7 +23,7 @@ const store = usePokeStore();
 const pokeComputed = computed(
   () =>
     (pokemon.value = _find(
-      store.pokemonComputed,
+      store.pokemonArray,
       (pokemon: Pokemon) => pokemon.Name === useRoute().params.nome
     )!)
 );
