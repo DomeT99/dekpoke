@@ -12,7 +12,7 @@ const call = new CallData<Move>();
 const moveComputed = computed(() => store.moveArray);
 
 onNuxtReady(async () => {
-  const response = await call.useGet(config.public.movesUrl, store.moveArray);
+  const response = await call.useGet("/api/moves.json", store.moveArray);
   componentStore.isLoading = response!;
 });
 </script>
