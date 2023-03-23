@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+  ssr: false,
   runtimeConfig: {
     public: {
       pokeUrl: process.env.API_POKEMON_URL,
@@ -25,9 +26,9 @@ export default defineNuxtConfig({
     upperAfterPrefix: false,
     exclude: ["map"],
     alias: [
-      ["camelCase", "stringToCamelCase"], // => stringToCamelCase
-      ["kebabCase", "stringToKebab"], // => stringToKebab
-      ["isDate", "isLodashDate"], // => _isLodashDate
+      ["camelCase", "stringToCamelCase"], 
+      ["kebabCase", "stringToKebab"], 
+      ["isDate", "isLodashDate"], 
     ],
   },
   css: ["assets/scss/global.scss"],
