@@ -5,16 +5,12 @@ import { useMoveStore } from "../store/moveStore";
 
 const componentStore = useComponentStore();
 const store = useMoveStore();
-const config = useRuntimeConfig();
 
 const call = new CallData<Move>();
 
 const moveComputed = computed(() => store.moveArray);
 
-onNuxtReady(async () => {
-  const response = await call.useGet("/api/moves.json", store.moveArray);
-  componentStore.isLoading = response!;
-});
+onNuxtReady(async () => await call.useGet("./api/moves.json", store.moveArray));
 </script>
 <template>
   <Spinner v-if="componentStore.isLoading" />

@@ -5,16 +5,14 @@ import { usePokeStore } from "../store/pokeStore";
 
 const componentStore = useComponentStore();
 const store = usePokeStore();
-const config = useRuntimeConfig();
 
 const call = new CallData<Pokemon>();
 
 const pokemonComputed = computed(() => store.pokemonArray);
 
-onNuxtReady(async () => {
-  const response = await call.useGet("/api/pokemon.json", store.pokemonArray);
-  componentStore.isLoading = response!;
-});
+onNuxtReady(
+  async () => await call.useGet("./api/pokemon.json", store.pokemonArray)
+);
 </script>
 <template>
   <Spinner v-if="componentStore.isLoading" />
