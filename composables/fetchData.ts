@@ -7,6 +7,8 @@ export class CallData<T> {
         _forEach(data.value, (data: T) => dataArray.push(data));
 
         return pending.value;
+      } else {
+        return false;
       }
     } catch (e) {
       throw e;

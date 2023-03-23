@@ -10,7 +10,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-  ssr: false,
   runtimeConfig: {
     public: {
       pokeUrl: process.env.API_POKEMON_URL,
