@@ -15,7 +15,6 @@ const itemArray = computed(() => store.itemComputed);
 const fetchItems = async () => {
   try {
     if (store.itemComputed.length <= 0) {
-      
       const { data, pending } = await useLazyFetch<Item[]>("/api/items.json");
 
       _forEach(data.value, (item: Item) => {
@@ -33,9 +32,7 @@ const fetchItems = async () => {
 <template>
   <Spinner v-if="componentStore.isLoading" />
   <section class="container mx-auto" v-else>
-    <header class="text-center mb-[3rem] mt-[3rem]">
-      <h1>Items</h1>
-    </header>
+    <GenericHeader>Items</GenericHeader>
 
     <Table
       :data="itemArray"

@@ -16,9 +16,7 @@ onNuxtReady(async () => await call.useGet("/api/pokemon.json", store.pokemonArra
 <template>
   <Spinner v-if="componentStore.isLoading" />
   <section class="container mx-auto" v-else>
-    <header class="text-center mb-[3rem] mt-[3rem]">
-      <h1>List of Pokemon</h1>
-    </header>
+    <GenericHeader>List of Pokemon</GenericHeader>
 
     <div
       class="grid lg:grid-cols-6 md:grid-cols-3 gap-[3rem] mb-[8rem] max-h-[50rem] overflow-auto p-8 bg-[var(--tertiary-color)] border-4 border-[var(--secondary-color)] rounded-lg"

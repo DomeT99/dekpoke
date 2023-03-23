@@ -11,15 +11,11 @@ const call = new CallData<Move>();
 const moveComputed = computed(() => store.moveArray);
 
 onNuxtReady(async () => await call.useGet("/api/moves.json", store.moveArray));
-
 </script>
 <template>
   <Spinner v-if="componentStore.isLoading" />
   <section class="container mx-auto" v-else>
-    <header class="text-center mb-[3rem] mt-[3rem]">
-      <h1>Moves</h1>
-    </header>
-
+    <GenericHeader>Moves</GenericHeader>
     <Table
       :data="moveComputed"
       :table-header="['Moves', 'Power', 'Accuracy', 'Type']"
