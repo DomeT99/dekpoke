@@ -6,30 +6,12 @@ import { usePokeStore } from "../store/pokeStore";
 const componentStore = useComponentStore();
 const store = usePokeStore();
 
-onNuxtReady(async () => {
-  await fetchPokemons();
-});
+const call = new CallData<Pokemon>();
 
-const pokemonArray = computed(() => store.pokemonComputed);
+const pokemonComputed = computed(() => store.pokemonArray);
 
-const fetchPokemons = async () => {
-  try {
-    
-    if (store.pokemonComputed.length <= 0) {
-      const { data, pending } = await useLazyFetch<Pokemon[]>(
-        "/api/pokemon.json"
-      );
+onNuxtReady(async () => await call.useGet("/api/pokemon.json", store.pokemonArray));
 
-      _forEach(data.value, (pokemon: Pokemon) =>
-        store.pokemonComputed.push(pokemon)
-      );
-
-      componentStore.isLoading = pending.value;
-    }
-  } catch (e) {
-    throw e;
-  }
-};
 </script>
 <template>
   <Spinner v-if="componentStore.isLoading" />
@@ -41,7 +23,7 @@ const fetchPokemons = async () => {
     <div
       class="grid lg:grid-cols-6 md:grid-cols-3 gap-[3rem] mb-[8rem] max-h-[50rem] overflow-auto p-8 bg-[var(--tertiary-color)] border-4 border-[var(--secondary-color)] rounded-lg"
     >
-      <div v-for="pokemon in pokemonArray">
+      <div v-for="pokemon in pokemonComputed">
         <Card
           :func="() => useRouter().push(`/pokemon/${pokemon.Name}`)"
           :image="pokemon.Sprites?.Front_Default"

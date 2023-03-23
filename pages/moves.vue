@@ -4,27 +4,14 @@ import { useComponentStore } from "../store/componentStore";
 import { useMoveStore } from "../store/moveStore";
 
 const componentStore = useComponentStore();
-const moveStore = useMoveStore();
+const store = useMoveStore();
 
-onNuxtReady(async () => {
-  await fetchMoves();
-});
+const call = new CallData<Move>();
 
-const moveArray = computed(() => moveStore.moveComputed);
+const moveComputed = computed(() => store.moveArray);
 
-const fetchMoves = async () => {
-  try {
-    if (moveStore.moveComputed.length <= 0) {
-      const { data, pending } = await useLazyFetch<Move[]>("/api/moves.json");
+onNuxtReady(async () => await call.useGet("/api/moves.json", store.moveArray));
 
-      _forEach(data.value, (move: Move) => moveStore.moveComputed.push(move));
-
-      componentStore.isLoading = pending.value;
-    }
-  } catch (e) {
-    throw e;
-  }
-};
 </script>
 <template>
   <Spinner v-if="componentStore.isLoading" />
@@ -32,12 +19,10 @@ const fetchMoves = async () => {
     <header class="text-center mb-[3rem] mt-[3rem]">
       <h1>Moves</h1>
     </header>
-    
-    <div>
-      <Table
-        :data="moveArray"
-        :table-header="['Moves', 'Power', 'Accuracy', 'Type']"
-      />
-    </div>
+
+    <Table
+      :data="moveComputed"
+      :table-header="['Moves', 'Power', 'Accuracy', 'Type']"
+    />
   </section>
 </template>
