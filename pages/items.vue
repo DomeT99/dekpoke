@@ -5,6 +5,7 @@ import { useItemStore } from "../store/itemStore";
 
 const componentStore = useComponentStore();
 const store = useItemStore();
+const config = useRuntimeConfig();
 
 onNuxtReady(async () => {
   await fetchItems();
@@ -13,9 +14,12 @@ onNuxtReady(async () => {
 const itemArray = computed(() => store.itemComputed);
 
 const fetchItems = async () => {
+  
   try {
     if (store.itemComputed.length <= 0) {
-      const { data, pending } = await useLazyFetch<Item[]>("/api/items.json");
+      const { data, pending } = await useLazyFetch<Item[]>(
+        config.public.itemsUrl
+      );
 
       _forEach(data.value, (item: Item) => {
         item.Sprite = `<img class="display-img-override" src="${item.Sprite}" alt="${item.Name}"/>`;
