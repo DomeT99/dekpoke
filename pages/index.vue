@@ -11,10 +11,10 @@ const call = new CallData<Pokemon>();
 
 const pokemonComputed = computed(() => store.pokemonArray);
 
-onNuxtReady(
-  async () =>
-    await call.useGet(config.public.pokeUrl, store.pokemonArray)
-);
+onNuxtReady(async () => {
+  const response = await call.useGet(config.public.pokeUrl, store.pokemonArray);
+  componentStore.isLoading = response!;
+});
 </script>
 <template>
   <Spinner v-if="componentStore.isLoading" />
