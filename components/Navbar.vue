@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const menu = [
+import { Menu } from "~~/modules/types";
+
+const menu: Menu[] = [
   { title: "Pokemon", path: "/" },
   { title: "Moves", path: "/moves" },
   { title: "Items", path: "/items" },

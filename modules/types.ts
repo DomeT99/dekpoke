@@ -5,3 +5,7 @@ export type Colors =
   | "--quaternary-color"
   | "--fifth-color"
   | "--sixth-color";
+export type Menu = {
+  title: string;
+  path: string;
+};

@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <div class="md:h-[55rem] h-[45rem] grid content-center">
     <div class="flex justify-center content-center">

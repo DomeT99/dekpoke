@@ -1,9 +1,6 @@
 <script setup lang="ts">
-let nuxtLogo = computed(() => "/images/built-with-nuxt.svg");
-
-const dateNow = computed(() => {
-  return new Date().getFullYear();
-});
+const nuxtLogo = computed(() => "/images/built-with-nuxt.svg");
+const dateNow = computed(() => new Date().getFullYear());
 
 function openLinkTree() {
   window.open("https://linktr.ee/domenicotenace");
