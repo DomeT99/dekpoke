@@ -4,22 +4,23 @@ import { useComponentStore } from "../store/componentStore";
 import { useItemStore } from "../store/itemStore";
 
 const componentStore = useComponentStore();
-const moveStore = useItemStore();
+const store = useItemStore();
 
 onNuxtReady(async () => {
   await fetchItems();
 });
 
-const itemArray = computed(() => moveStore.itemComputed);
+const itemArray = computed(() => store.itemComputed);
 
 const fetchItems = async () => {
   try {
-    if (moveStore.itemComputed.length <= 0) {
+    if (store.itemComputed.length <= 0) {
+      
       const { data, pending } = await useLazyFetch<Item[]>("/api/items.json");
 
-      _forEach(data.value, (move: Item) => {
-        move.Sprite = `<img class="display-img-override" src="${move.Sprite}" alt="${move.Name}"/>`;
-        moveStore.itemComputed.push(move);
+      _forEach(data.value, (item: Item) => {
+        item.Sprite = `<img class="display-img-override" src="${item.Sprite}" alt="${item.Name}"/>`;
+        store.itemComputed.push(item);
       });
 
       componentStore.isLoading = pending.value;
@@ -36,11 +37,9 @@ const fetchItems = async () => {
       <h1>Items</h1>
     </header>
 
-    <div>
-      <Table
-        :data="itemArray"
-        :table-header="['Name', 'Cost', 'Effect', 'Sprite']"
-      />
-    </div>
+    <Table
+      :data="itemArray"
+      :table-header="['Name', 'Cost', 'Effect', 'Sprite']"
+    />
   </section>
 </template>

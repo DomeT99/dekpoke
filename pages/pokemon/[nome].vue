@@ -6,6 +6,7 @@ let parameter = useUpperCase(useRoute().params.nome.toString()!);
 useHead({
   title: `Dekpoke - ${parameter}`,
 });
+
 const pokemon: Ref<Pokemon> = ref({
   Id: 0,
   Name: "",
@@ -17,12 +18,12 @@ const pokemon: Ref<Pokemon> = ref({
   Types: [],
   Moves: [],
 });
-const pokeStore = usePokeStore();
+const store = usePokeStore();
 
 const pokeComputed = computed(
   () =>
     (pokemon.value = _find(
-      pokeStore.pokemonComputed,
+      store.pokemonComputed,
       (pokemon: Pokemon) => pokemon.Name === useRoute().params.nome
     )!)
 );
